@@ -10,7 +10,7 @@ variable "ami_id" {
 
 variable "instance_type" {
   type    = string
-  default = "t2.micro" # Requisito inicial
+  default = "t3.micro"
 }
 
 variable "iam_instance_profile" {
@@ -25,5 +25,5 @@ variable "app_port" {
 
 variable "my_public_ip" {
   type    = string
-  default = "0.0.0.0/0"
+  default = "190.104.20.154/32"
 }
