@@ -1,10 +1,11 @@
 resource "aws_instance" "app_server" {
   ami                  = var.ami_id
   instance_type        = var.instance_type
-  security_groups      = [var.security_group_id]
+  
+  vpc_security_group_ids = [var.security_group_id]
+  
   iam_instance_profile = var.iam_instance_profile
 
-  # Script de automatizacion con yum (Amazon Linux 2023)
   user_data = <<-EOF
               #!/bin/bash
               yum update -y
