@@ -15,7 +15,7 @@ variable "instance_type" {
 
 variable "iam_instance_profile" {
   type    = string
-  default = "LabRole" # El que confirmamos en tu captura de IAM
+  default = "LabInstanceProfile" # <- Modificado aquí
 }
 
 variable "app_port" {
